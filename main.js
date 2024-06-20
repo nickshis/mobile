@@ -4,7 +4,10 @@ let body = document.body
 const swiperEl = document.querySelector('swiper-container')
 let swiper_cont = document.querySelector('.mySwiper10')
 
-
+// fetch('http://localhost:7000/vistors', {
+//   method: "PATCH",
+//   // body:JSON.stringify({})
+// })
 yes21.onclick = () => {
     nea.style.opacity = '0'
     setTimeout(() => {

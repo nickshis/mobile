@@ -63,7 +63,7 @@
             "strong": "11%",
             "alcohol": "4.0%",
             "img": "Zlata Chimkent.png",
-            "color": "#9D1B18"
+            "color": "#78734A"
         },
         {
             "title": "Zlata Original",
@@ -71,7 +71,7 @@
             "strong": "12%",
             "alcohol": "4.2%",
             "img": "Zlata.png",
-            "color": "#9D1B18"
+            "color": "#E35641"
         },
         {
             "title": "Belgian Stout",
@@ -79,7 +79,7 @@
             "strong": "12%",
             "alcohol": "4.5%",
             "img": "Zlata Belgian Stout.png",
-            "color": "#9D1B18"
+            "color": "gold"
         },
         {
             "title": "Belgian Ale",
@@ -87,7 +87,7 @@
             "strong": "15%",
             "alcohol": "5.4%",
             "img": "Zlata Belgian Ale 2.png",
-            "color": "#9D1B18"
+            "color": "#99BC53"
         },
         {
             "title": "Weissbier hoegarden",
@@ -95,7 +95,7 @@
             "strong": "11%",
             "alcohol": "4.5%",
             "img": "Weissbier HG.png",
-            "color": "#9D1B18"
+            "color": "#F4D191"
         },
         {
             "title": "Zlata Cherry",
@@ -103,7 +103,7 @@
             "strong": "12%",
             "alcohol": "2.5%",
             "img": "Zlata Cherry.png",
-            "color": "#9D1B18"
+            "color": "#2E3960"
         },
         {
             "title": "Beermix pineapple",
@@ -111,7 +111,7 @@
             "strong": "12%",
             "alcohol": "2.5%",
             "img": "Zlata Pineapple.png",
-            "color": "#9D1B18"
+            "color": "#DBA021"
         }
     ],
 
