@@ -11,8 +11,8 @@
 }
 
 body{
-    overflow-x: hidden;
-    background-image: url('фон Злата.jpg');
+    overflow: hidden;
+    background-image: url('/public/fon.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,7 +100,7 @@ header{
 }
 
 .neg{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -312,7 +312,7 @@ main{
 
             h2:nth-child(5){
                 margin-left: 47.5vh;
-                margin-top: 20px;
+                margin-top: 100px;
             }
         }
 
@@ -620,15 +620,17 @@ footer{
     }
 }
 
+/////////// 1400px ///////////
+
 @media only screen and (max-width: 1400px){
     header{
-        width: 93%;
+        width: 100%;
         position: fixed;
         margin: 0 auto;
         translate: none;
     }
     main{
-        width: 100%;
+        
 
         .history{
             
@@ -657,6 +659,70 @@ footer{
                     margin-left: 47.5vh;
                     margin-top: 20px;
                 }
+            }
+        }
+        .start{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+    
+            .zlatabrewery-text{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                position: relative;
+    
+                h1{
+                    text-align: center;
+                    font-size: 240px;
+                    z-index: -1;   
+                }
+        
+                h1 {
+                    color: #fff;
+                    position: absolute;
+                }
+        
+                h1:nth-child(2), h1:nth-child(4){
+                    color: #f4a403;
+                    animation: animate 4s ease-in-out infinite;
+                }
+    
+                h1:nth-child(1), h1:nth-child(2){
+                    margin-bottom: 35%;
+                }
+    
+                h1:nth-child(3), h1:nth-child(4){
+                    margin-top: 35%;
+                }
+        
+                h1:nth-child(1), h1:nth-child(3) {
+                    color: transparent;
+                    -webkit-text-stroke: 2px white;
+                }
+                
+            }
+            
+    
+            img{
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .rotate{
+                margin-right: 1px;
+                margin-top: 1px;
+                height: 700px;
+                animation: rotate 7s linear infinite;
+                z-index: 100;
             }
         }
         .sostav{
@@ -780,6 +846,140 @@ footer{
     }
 }
 
+@media only screen and (max-width: 1200px){
+    main{
+        .start{
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    main{
+        
+
+        .history{
+            
+            .history-descr{
+        
+                h2{
+                    width: 450px;
+                }
+        
+                h2:nth-child(2){
+                    margin-top: 7vh;
+                }
+        
+                h2:nth-child(1), h2:nth-child(3){
+                    margin-left: 94vh;
+                }
+        
+                h2:nth-child(5){
+                    margin-left: 47.5vh;
+                    margin-top: 60px;
+                }
+            }
+        }
+        .start{
+    
+            .zlatabrewery-text{
+
+                h1{
+                    text-align: center;
+                    font-size: 190px;
+                    z-index: -1;   
+                }
+        
+                h1 {
+                    color: #fff;
+                    position: absolute;
+                }
+        
+                
+            }
+            
+    
+            img{
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .rotate{
+                margin-right: 1px;
+                margin-top: 1px;
+                height: 700px;
+                animation: rotate 7s linear infinite;
+                z-index: 100;
+            }
+        }
+        .sostav{
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            height: 55vh;
+            padding: 10px;
+            
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 23%;
+                height: 54%;
+                padding: 10px;
+                border-radius: 30px;
+                overflow: hidden;
+                box-shadow: 4px 4px 20px 2px black;
+    
+                img{
+                    width: 95%;
+                    height: 25vh;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+    
+            div:hover{
+                height: 100%;
+                overflow-y: scroll;
+            }
+    
+            .water{
+                background-color: blue;
+                color: aqua;
+            }
+            .solod{
+                background-color: #f4a403;
+                color: wheat;
+                
+                img{
+                    width: 75%;
+                }
+            }
+            .hmel{
+                background-color: greenyellow;
+                color: green;
+    
+                img{
+                    width: 100%;
+                }
+            }
+            .drojji{
+                background-color: rgb(255, 204, 110);
+                color: rgb(140, 140, 140);
+    
+                img{
+                    width: 119%;
+                }
+            }
+        }
+    }    
+}
+
 /////////////////////// 450px ///////////////////////
 
 @media only screen and (max-width: 450px){
@@ -788,12 +988,74 @@ footer{
         gap: 60px;
         position: fixed;
         overflow-x: scroll;
-        width: 30%;
+        width: 100%;
         margin: 0;
         translate: none;
     }
     body{
         overflow-x: hidden;
+    }
+    .posters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            width: 80%;
+            height: 80%;
+            column-gap: 10px;
+            row-gap: 10px;
+    
+            .grids{
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat; 
+            }
+    
+            .grids:nth-child(1){
+                background-image: url('/public/holiday.jpg');
+            }
+    
+            .grids:nth-child(2){
+                background-image: url('/public/Post-Zlata.jpg');
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+    
+            .grids:nth-child(3){
+                background-image: url('/public/more photo.jpg');
+                grid-row: 2 / 4;
+                grid-column: 1 / 3;
+            }
+    
+            .grids:nth-child(4){
+                background-image: url('/public/poster.png');
+                grid-row: 4;
+                grid-column: 1 / 1;
+            }
+            
+            .grids:nth-child(5){
+                background-image: url('/public/Post-Zlata-1.jpg');
+                grid-column: 1 / 3;
+            }
+
+            .grids:nth-child(6){
+                background-image: url('/public/bavarian.png');
+                grid-column: 2 / 3;
+                grid-row: 4 / 6;
+            }
+            .grids:nth-child(7){
+                background-image: url('/public/poster2.png');
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+            }
+    
+        }
     }
     main{
         .start{
@@ -813,7 +1075,7 @@ footer{
 
                 h1{
                     text-align: center;
-                    font-size: 50px;
+                    font-size: 70px;
                     z-index: -1;   
                 }
     
@@ -828,16 +1090,16 @@ footer{
                 }
 
                 h1:nth-child(1), h1:nth-child(2){
-                    margin-bottom: 60vh;
+                    margin-bottom: 40vh;
                 }
 
                 h1:nth-child(3), h1:nth-child(4){
-                    margin-top: 60vh;
+                    margin-top: 40vh;
                 }
     
                 h1:nth-child(1), h1:nth-child(3) {
                     color: transparent;
-                    -webkit-text-stroke: 2px white;
+                    -webkit-text-stroke: 2px #f4a403;
                 }
             
             }
@@ -861,8 +1123,18 @@ footer{
             }
         }
 
+        .history-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10vh;
+            background: linear-gradient(45deg, red, rgb(255, 105, 105), rgb(255, 27, 27));
+            font-size: 15px;
+        }
+
         .history{
-            font-size: 5px;
+            font-size: 7px;
             
             .history-descr{
                 display: flex;
@@ -873,7 +1145,7 @@ footer{
         
                 h2{
                     text-align: center;
-                    width: 100px;
+                    width: 150px;
                     color: rgb(196, 166, 0);
                 }
         
@@ -882,24 +1154,24 @@ footer{
                 }
         
                 h2:nth-child(1), h2:nth-child(3){
-                    margin-left: 0vh;
+                    margin-left: 28vh;
                 }
         
                 h2:nth-child(5){
-                    margin-left: 0vh;
-                    margin-top: 20px;
+                    margin-left: 14vh;
+                    margin-top: 90px;
                 }
             }
             
             .history-line{
                 display: flex;
-                // align-items: center;
-                // justify-content: center;
+                align-items: center;
+                justify-content: center;
                 flex-direction: column;
                 gap: 80px;
                 position: absolute;
-                // margin-left: 50%;
-                // translate: -50% 0%;
+                margin-left: 50%;
+                translate: -50% 0%;
                 padding: 200px 0px;
     
                 h4{
@@ -919,17 +1191,17 @@ footer{
         }
         .sostav{
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
             width: 100%;
             padding: 10px;
             
             div{
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 23%;
-                height: 48%;
+                // align-items: center;
+                width: 47%;
+                height: 30%;
                 padding: 10px;
                 border-radius: 30px;
                 overflow: hidden;
@@ -945,7 +1217,8 @@ footer{
             }
     
             div:hover{
-                height: 100%;
+                height: 70%;
+                overflow-y: scroll;
             }
     
             .water{
@@ -982,7 +1255,7 @@ footer{
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 20vh;
+            height: 50vh;
     
             .newSwiper{
                 width: 80%;
@@ -1097,17 +1370,17 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 80px;
+        gap: 45px;
         width: 100%;
         height: 15vh;
         background-color: #591513;
         color: white;
-        font-size: 7px;
+        font-size: 9px;
     
         .info{
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             
         }
         .social{
@@ -1118,16 +1391,148 @@ footer{
                 gap: 5px;
                 
                 img{
-                    width: 35px;
-                    height: 35px;
+                    width: 25px;
+                    height: 25px;
                     border-radius: 5px;
                 }
     
                 img:nth-child(2){
-                    width: 30px;
-                    height: 30px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .pubs{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 100px;
+        width: 100%;
+        height: 100vh;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        
+        h1:nth-child(1){
+            margin-right: 50%;
+            translate: 50% 0%;
+        }
+        
+        swiper-container {
+            width: 90%;
+            height: 80%;
+          }
+      
+          swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 22px;
+            font-weight: bold;
+            color: orange;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+    
+            .img_div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50%;
+                
+                img{
+                    // width: auto;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+    
+            div:nth-child(2){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 10px;
+                font-size: 18px;
+                width: 100%;
+                height: 50%;
+            }
+          }
+    }
+}
+
+/////////////////// 375px ////////////////////
+
+@media only screen and (max-width: 376px){
+    main{
+        .pubs{
+            margin-top: 20px;
+            swiper-slide{
+                div:nth-child(2){
+                    font-size: 16px;
+                }
+            }
+        }
+        
+        .history{
+            .history-descr{
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+                padding: 200px 0px;
+                width: 50%;
+        
+                h2{
+                    text-align: center;
+                    width: 150px;
+                    color: rgb(196, 166, 0);
+                }
+        
+                h2:nth-child(2){
+                    margin-top: 7vh;
+                }
+        
+                h2:nth-child(1), h2:nth-child(3){
+                    margin-left: 32vh;
+                }
+        
+                h2:nth-child(5){
+                    margin-left: 16vh;
+                    margin-top: 110px;
                 }
             }
         }
     }
 }
+
+///////////////// 360px ////////////////////
+
+@media only screen and (max-width: 361px){
+    main{
+        .pubs{
+            margin-top: 20px;
+        }
+        
+        .history{
+            .history-descr{
+                h2:nth-child(1), h2:nth-child(3){
+                    margin-left: 28vh;
+                }
+                h2:nth-child(5){
+                    margin-left: 14vh;
+                }
+            }
+        }
+    }
+}
+
