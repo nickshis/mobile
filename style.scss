@@ -78,6 +78,7 @@ header{
     width: 100%;
     height: 100vh;
     position: absolute;
+    background-color: black;
     background-image: url("https://cdn.elebase.io/173fe953-8a63-4a8a-8ca3-1bacb56d78a5/ddc8fa39-b49f-46c0-abf1-8cd1d5cedcd9-shutterstock_1538202113.jpg?q=90");
     background-size: cover;
     background-repeat: no-repeat;
@@ -618,6 +619,7 @@ main{
     swiper-container {
       width: 100%;
       height: 100%;
+      transition: 0.5s ease;
     }
 
     swiper-slide {
@@ -653,10 +655,11 @@ main{
 
     swiper-slide img {
       display: block;
-      width: 65%;
-      height: 65%;
-      margin-top: 10vh;
+      width: 85%;
+      height: 85%;
+      margin-bottom: 10vh;
       object-fit: contain;
+      transition: 0.5s ease;
     }
 }
 
@@ -668,7 +671,8 @@ footer{
     gap: 80px;
     width: 100%;
     height: 35vh;
-    background-color: #591513;
+    backdrop-filter: blur(5px);
+    background-color: rgb(72, 0, 0);
     color: white;
 
     .info{
