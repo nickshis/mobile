@@ -6,6 +6,7 @@ let body = document.body
 const swiperEl = document.querySelector('swiper-container')
 let swiper_cont = document.querySelector('.mySwiper10')
 let catalog = document.querySelector('.catalog')
+let parallax_bg = document.querySelector('.parallax-bg')
 
 let id = Math.random()
 
@@ -53,20 +54,47 @@ function reload(arr, place){
   for(let item of arr){
     let container = document.createElement('swiper-slide')
     let img = document.createElement('img')
-    let info = document.createElement('h2')
     let descr = document.createElement('h3')
     let title = document.createElement('h1')
 
     img.src = '/public/' + item.img
 
-    info.innerHTML = `Содержание алкоголя: ${item.alcohol} <br> Крепость: ${item.strong}`
-    title.innerHTML = item.title
-    descr.innerHTML = item.description
+    img.onmouseenter = () => {
+      if(item.img2){
+        img.style.opacity = 0
+        setTimeout(() => {
+          img.src = '/public/' + item.img2
+          img.style.opacity = 1
+        }, 300)
+      }
+    }
+
+    img.onmouseout = () => {
+      if(item.img2){
+        img.style.opacity = 0
+          setTimeout(() => {
+            img.style.opacity = 1
+            img.src = '/public/' + item.img
+          }, 300)  
+      }
+    }
     
-    container.append(img, info, descr, title)
+    if(item.alcohol){
+      let info = document.createElement('h2')
+      info.innerHTML = `Содержание алкоголя: ${item.alcohol} <br> Крепость: ${item.strong}`
+      title.innerHTML = item.title
+      descr.innerHTML = item.description
+      container.append(img, info, descr, title)
+    } else {
+      title.innerHTML = item.title
+      descr.innerHTML = item.description
+      container.append(img, descr, title)
+    }
+    
     place.append(container)
    }
 }
+
 
 fetch('http://localhost:7000/news')
   .then(res => res.json())
@@ -82,7 +110,7 @@ function reload2(arr, place){
     let descr = document.createElement('div')
     let p = document.createElement('p')
 
-    container.style.backgroundImage = `url(${item.img})`
+    parallax_bg.style.backgroundImage = `url(${item.img})`
 
     title.classList.add('title')
     subTitle.classList.add('subtitle')
